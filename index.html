@@ -2,21 +2,29 @@
 <head>
     <title>Etch-A-Sketch</title>
     <style>
-        #container div{
-            border: solid .1em black;
-            display:grid;
+        #container {
+            width: 0 auto;
+            margin: 0 auto;
+            text-align: center;
+            white-space: nowrap;
         }
+        #container div{
+            display:inline-block;
+            border: solid .1em black;
+            height: 3em;
+            width:3em;
+            margin:.1em;
+        }
+
+       
     </style>
 </head>
 <body>
     <div id="buttons">
-        <input type="number" id="columns">
-        <input type="number" id="rows">
+        <input type="number" id="gridNumber">
         <input type="submit" id="submit">
     </div>
     <div id="container">
-
     </div>
 </body>
-
 <script type="text/javascript" src="index.js"></script>

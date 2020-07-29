@@ -1,24 +1,22 @@
 document.getElementById("submit").onclick = function (e) {
-gridCollums()
 gridRows()
 }
 
 function gridCollums() {
-    let columns = document.getElementById("columns").value;
+    let columns = document.getElementById("gridNumber").value;
     for (let i = 0; i<columns; i++) {
         let columngrid = document.createElement("div")
         columngrid.innerHTML="\t"
         document.getElementById("container").appendChild(columngrid)
     }
-return
+    document.getElementById("container").appendChild(document.createElement("br"))
+    return
 }
 
 function gridRows() {
-let rows = document.getElementById("rows").value;
+    let rows = document.getElementById("gridNumber").value;
     for (let i = 0; i< rows; i++) {
-        let rowgrid = document.createElement("div")
-        rowgrid.innerHTML="\t"
-        document.getElementById("container").appendChild(rowgrid)
+        gridCollums()
     }
 return
 }
