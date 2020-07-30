@@ -1,30 +1,68 @@
 <!DOCTYPE html>
+
 <head>
     <title>Etch-A-Sketch</title>
     <style>
-        #container {
-            width: 0 auto;
-            margin: 0 auto;
-            text-align: center;
-            white-space: nowrap;
-        }
-        #container div{
-            display:inline-block;
-            border: solid .1em black;
-            height: 3em;
-            width:3em;
-            margin:.1em;
+        body {
+            font-size: .5em;
         }
 
+        #container{
+            position:absolute;
+            left:0;
+            right:0;
+            z-index: 1;
+            height: 60vh;
+            width: 40vw;
+            margin: 0 auto;
+            border: solid 2em red;
        
+        }
+
+        #rows {
+            position:absolute;
+            left:0;
+            right:0;
+            z-index: 2;
+            height: 60vh;
+            width: 40vw;
+            display:flex;
+            flex-direction: row;
+        }
+
+        #rows div {
+            flex-grow:1;
+            border: solid .1em black;
+        }
+     
+        #columns {
+            position:absolute;
+            left:0;
+            right:0;
+            z-index: 3;
+            height: 60vh;
+            width: 40vw;
+            display:flex;
+            flex-direction: column;
+        }
+        #columns div {
+            flex-grow: 1;
+            border: solid .1em black ;
+        }
     </style>
 </head>
+
 <body>
+    <h1>Input your grid size preference</h1>
     <div id="buttons">
         <input type="number" id="gridNumber">
         <input type="submit" id="submit">
     </div>
     <div id="container">
+        <div id="rows">
+        </div>
+        <div id="columns">
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="index.js"></script>
