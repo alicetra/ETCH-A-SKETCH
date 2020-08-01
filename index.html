@@ -15,39 +15,13 @@
             height: 60vh;
             width: 40vw;
             margin: 0 auto;
-            border: solid 2em red;
-       
+            border: solid 6em red;
+            display:grid;
         }
 
-        #rows {
-            position:absolute;
-            left:0;
-            right:0;
-            z-index: 2;
-            height: 60vh;
-            width: 40vw;
-            display:flex;
-            flex-direction: row;
-        }
+        #container div {
+            border: solid .1em red;
 
-        #rows div {
-            flex-grow:1;
-            border: solid .1em black;
-        }
-     
-        #columns {
-            position:absolute;
-            left:0;
-            right:0;
-            z-index: 3;
-            height: 60vh;
-            width: 40vw;
-            display:flex;
-            flex-direction: column;
-        }
-        #columns div {
-            flex-grow: 1;
-            border: solid .1em black ;
         }
     </style>
 </head>
@@ -58,11 +32,6 @@
         <input type="number" id="gridNumber">
         <input type="submit" id="submit">
     </div>
-    <div id="container">
-        <div id="rows">
-        </div>
-        <div id="columns">
-        </div>
-    </div>
+    <div id="container"></div>
 </body>
 <script type="text/javascript" src="index.js"></script>

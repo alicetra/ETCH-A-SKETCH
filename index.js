@@ -1,24 +1,23 @@
 document.getElementById("submit").onclick = function (e) {
-gridRows()
-gridCollums()
+    grid()
+    css()
 }
 
-function gridCollums() {
+function grid() {
     let columns = document.getElementById("gridNumber").value;
-    for (let i = 0; i<columns; i++) {
+    for (let i = 0; i<(columns * columns); i++) {
         let columngrid = document.createElement("div")
-        columngrid.innerHTML="\t"
-        document.getElementById("rows").appendChild(columngrid)
+        columngrid.innerHTML = i
+        document.getElementById("container").appendChild(columngrid)
     }
-    return
+        return
 }
 
-function gridRows() {
-    let rows = document.getElementById("gridNumber").value;
-    for (let i = 0; i<rows; i++) {
-        let rowsgrid = document.createElement("div")
-        rowsgrid.innerHTML="\t"
-        document.getElementById("columns").appendChild(rowsgrid)
+function css() {
+    let columns = document.getElementById("gridNumber").value
+    num = ""
+    for (i=0; i<columns; i++) {
+        num += "auto "
     }
-    return
+    document.getElementById("container").style.gridTemplateColumns = num
 }
