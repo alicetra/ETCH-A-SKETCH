@@ -3,6 +3,12 @@ document.getElementById("submit").onclick = function () {
     css()
 }
 
+document.getElementById("reset").onclick= function () {
+    window.location.reload();        
+}
+
+
+
 function grids() {
     let columns = document.getElementById("gridNumber").value;
     for (let i = 0; i < (columns * columns); i++) {
@@ -17,8 +23,6 @@ function grids() {
     return
 }
 
-
-
 function css() {
     let columns = document.getElementById("gridNumber").value
     num = ""
@@ -26,4 +30,8 @@ function css() {
         num += "auto "
     }
     document.getElementById("container").style.gridTemplateColumns = num
+}
+
+function reset() {
+
 }
