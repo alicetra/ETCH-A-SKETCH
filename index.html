@@ -7,16 +7,16 @@
             font-size: .5em;
         }
 
-        #container{
-            position:absolute;
-            left:0;
-            right:0;
+        #container {
+            position: absolute;
+            left: 0;
+            right: 0;
             z-index: 1;
             height: 60vh;
             width: 40vw;
             margin: 0 auto;
             border: solid 6em red;
-            display:grid;
+            display: grid;
         }
 
         #container div {
@@ -27,19 +27,29 @@
         #gridNumber {
             width: 5vw;
         }
-     
 
- 
+        h1 {
+            color: red;
+            font-size: 5em;
+        }
+
+        .h {
+            text-align: center;
+        }
+        #buttons {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Input your grid size preference</h1>
-    <div id="buttons">
-        <input type="input" id="gridNumber">
-        <input type="submit" id="submit">
-        <button type="reset" id="reset"> Clear current grid </button>
-    </div>
-    <div id="container"></div>
+    <h1 class="h">Etch-A-Sketch</h1>
+    <h2 class="h">Input your grid size preference</h1>
+        <div id="buttons">
+            <input type="input" id="gridNumber">
+            <input type="submit" id="submit">
+            <button type="reset" id="reset"> Clear current grid </button>
+        </div>
+        <div id="container"></div>
 </body>
 <script type="text/javascript" src="index.js"></script>
