@@ -1,4 +1,6 @@
+
 document.getElementById("submit").onclick = function () {
+    this.onclick=null;
     grids()
     css()
 }
